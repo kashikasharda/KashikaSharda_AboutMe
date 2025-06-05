@@ -26,11 +26,10 @@ git commit -m "$commit_message"
 # Check if remote exists
 if ! git remote get-url origin > /dev/null 2>&1; then
     echo "🔗 Setting up GitHub remote..."
-    read -p "Enter your GitHub username: " github_username
-    read -p "Enter repository name (default: 'kashika.dharaik.in'): " repo_name
-    repo_name=${repo_name:-"kashika.dharaik.in"}
-    
-    git remote add origin "https://github.com/$github_username/$repo_name.git"
+    echo "Repository: https://github.com/kashikasharda/KashikaSharda_AboutMe"
+    git remote add origin "https://github.com/kashikasharda/KashikaSharda_AboutMe.git"
+else
+    echo "🔗 Remote already configured: $(git remote get-url origin)"
 fi
 
 # Push to GitHub
@@ -41,10 +40,10 @@ echo ""
 echo "✅ Deployment completed!"
 echo ""
 echo "🌐 Next steps:"
-echo "1. Go to your GitHub repository settings"
+echo "1. Go to https://github.com/kashikasharda/KashikaSharda_AboutMe/settings/pages"
 echo "2. Navigate to Pages section"
 echo "3. Enable GitHub Pages from main branch"
-echo "4. Your site will be available at: https://yourusername.github.io/repositoryname"
-echo "5. For custom domain (kashika.dharaik.in), configure DNS settings as mentioned in README.md"
+echo "4. Add custom domain: kashika.dharaik.in"
+echo "5. Configure DNS settings as mentioned in README.md"
 echo ""
-echo "🎉 Kashika's portfolio website is ready to go live!" 
+echo "🎉 Portfolio will be live at: https://kashika.dharaik.in" 

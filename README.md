@@ -33,64 +33,71 @@ A modern, responsive portfolio website showcasing Kashika Sharda's expertise as 
 
 ## 🚀 Setup for GitHub Pages
 
-### Step 1: Create GitHub Repository
+### Step 1: Repository Setup
 
-1. Create a new repository on GitHub named `kashika.dharaik.in` or any preferred name
-2. Initialize with README (optional since we have one)
+Repository: **https://github.com/kashikasharda/KashikaSharda_AboutMe**
 
 ### Step 2: Upload Files
 
-1. Clone the repository to your local machine:
-   ```bash
-   git clone https://github.com/yourusername/kashika.dharaik.in.git
-   cd kashika.dharaik.in
-   ```
+**Option A: Using the Deploy Script**
+```bash
+chmod +x deploy.sh
+./deploy.sh
+```
 
-2. Add all the website files:
-   ```bash
-   # Copy all files (index.html, styles.css, script.js, README.md) to the repository
-   git add .
-   git commit -m "Initial portfolio website setup"
-   git push origin main
-   ```
+**Option B: Manual Git Commands**
+```bash
+git init
+git add .
+git commit -m "Initial portfolio website setup"
+git branch -M main
+git remote add origin https://github.com/kashikasharda/KashikaSharda_AboutMe.git
+git push -u origin main
+```
 
 ### Step 3: Enable GitHub Pages
 
-1. Go to your repository on GitHub
-2. Click on **Settings** tab
-3. Scroll down to **Pages** section
-4. Under **Source**, select **Deploy from a branch**
-5. Choose **main** branch and **/ (root)** folder
-6. Click **Save**
+1. Go to **https://github.com/kashikasharda/KashikaSharda_AboutMe/settings/pages**
+2. Under **Source**, select **Deploy from a branch**
+3. Choose **main** branch and **/ (root)** folder
+4. Click **Save**
 
 ### Step 4: Custom Domain Setup
 
-1. Purchase domain `kashika.dharaik.in` from your preferred registrar
-2. In your repository, create a file named `CNAME` (no extension):
-   ```
-   kashika.dharaik.in
-   ```
+1. The `CNAME` file is already included with `kashika.dharaik.in`
+2. In GitHub Pages settings, add custom domain: **kashika.dharaik.in**
 3. In your domain registrar's DNS settings, add:
-   - **Type**: CNAME
-   - **Name**: www (or @)
-   - **Value**: yourusername.github.io
    
-   Or for A records:
-   - **Type**: A
-   - **Name**: @
-   - **Value**: 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153
+   **CNAME Record:**
+   ```
+   Type: CNAME
+   Name: www
+   Value: kashikasharda.github.io
+   ```
+   
+   **OR A Records:**
+   ```
+   Type: A
+   Name: @
+   Values: 
+   - 185.199.108.153
+   - 185.199.109.153
+   - 185.199.110.153
+   - 185.199.111.153
+   ```
 
 4. Wait for DNS propagation (usually 24-48 hours)
 
 ## 📁 File Structure
 
 ```
-kashika.dharaik.in/
+KashikaSharda_AboutMe/
 ├── index.html          # Main HTML file
 ├── styles.css          # CSS styles and animations
 ├── script.js           # JavaScript functionality
 ├── README.md           # Documentation
-└── CNAME              # Custom domain configuration
+├── CNAME              # Custom domain configuration
+└── deploy.sh          # Deployment script
 ```
 
 ## 🛠️ Technologies Used
@@ -140,12 +147,15 @@ The main color scheme uses CSS custom properties:
 
 ## 🎯 Career Highlight
 
-**Upcoming Role**: Kashika is joining **Moveworks** as a Software Engineer in July 2024, marking an exciting new chapter in her career journey from FICO where she has been a Solution Engineer II since 2018.
+**Upcoming Role**: Kashika is joining **Moveworks** as a Software Engineer in July 2024, marking an exciting new chapter in her career journey from FICO where she has been a Solution Engineer since 2018.
+
+## 🌐 Live Website
+
+Once deployed, the website will be available at: **https://kashika.dharaik.in**
 
 ## 📧 Contact
 
 - **Email**: kashikasharda@gmail.com
-- **Phone**: +91 814 605 4977
 - **LinkedIn**: [linkedin.com/in/kashika-sharda](https://linkedin.com/in/kashika-sharda)
 - **GitHub**: [github.com/kashikasharda](https://github.com/kashikasharda)
 
